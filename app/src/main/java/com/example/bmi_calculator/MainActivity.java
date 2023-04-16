@@ -15,16 +15,14 @@ import com.example.bmi_calculator.core.BMICalculator;
 public class MainActivity extends AppCompatActivity {
 
     EditText userWeight, userHeight;
-    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userWeight.findViewById(R.id.userWeight);
-        userHeight.findViewById(R.id.userHeight);
-        button.findViewById(R.id.resultButton);
+        userWeight = findViewById(R.id.userWeight);
+        userHeight = findViewById(R.id.userHeight);
 
     }
 
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         if(bmiResult != -1){
 
             String resultCategory = bmiCalculator.getCategory(bmiResult);
-            resultNote = "Your BMI index is"+ String.format("%.2f", bmiResult)+ "\nBMI Category"+ resultCategory;
+            resultNote = "Your BMI index is: "+ String.format("%.2f", bmiResult)+ "\nBMI Category: "+ resultCategory;
 
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("BMI");
