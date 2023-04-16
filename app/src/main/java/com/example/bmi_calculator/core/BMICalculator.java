@@ -2,13 +2,13 @@ package com.example.bmi_calculator.core;
 
 public class BMICalculator {
 
-    private String errormsg;
+    private String errorMsg;
     private String bmiCategory;
     private double bmiValue;
 
-    public String getErrormsg(){
+    public String getErrorMsg(){
 
-        return errormsg;
+        return errorMsg;
     }
 
     public double calculateBMI(double weight, double height){
@@ -17,7 +17,7 @@ public class BMICalculator {
 
         if(height <= 0 || weight <= 0)
         {
-            errormsg = "Height or weight can't be zero";
+            errorMsg = "Height or weight can't be zero";
         }
 
         else{
